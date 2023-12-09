@@ -1,0 +1,224 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_deployer",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "CreateFail",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "FactoryNoapproved",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "agencyImplementation",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "agencyInstance",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "appImplementation",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "appInstance",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Deploy",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "implementation",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "agency",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "instance",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "implementation",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "app",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "instance",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address payable",
+              "name": "implementation",
+              "type": "address"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "currency",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "basePremium",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "address",
+                  "name": "feeRecipient",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint16",
+                  "name": "mintFeePercent",
+                  "type": "uint16"
+                },
+                {
+                  "internalType": "uint16",
+                  "name": "burnFeePercent",
+                  "type": "uint16"
+                }
+              ],
+              "internalType": "struct Asset",
+              "name": "asset",
+              "type": "tuple"
+            },
+            {
+              "internalType": "bytes",
+              "name": "immutableData",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "initData",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct AgencySettings",
+          "name": "agencySettings",
+          "type": "tuple"
+        },
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "implementation",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes",
+              "name": "immutableData",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "initData",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct AppSettings",
+          "name": "appSettings",
+          "type": "tuple"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "deployWrap",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "agencyInstance",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "deployer",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ]
+}
