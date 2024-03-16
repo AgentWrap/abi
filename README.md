@@ -6,6 +6,6 @@
 ### Sepolia-LPStaking: 0xd16fcfA9CB98913D50E027336c25BCfd1A610711
 ### Sepolia-UniswapV2Router02: 0xC532a74256D3Db42D0Bf7a0400fEFDbad7694008
 ### Sepolia-UniswapV2Factory: 0x7E0987E5b3a30e3f2828572Bb659A548460a3003
-### Sepolia-NFTStaking: 
-### Sepolia-Agent-TokenURI: 
-### Sepolia-Deployer-TokenURI: 
+### Sepolia-NFTStaking: 0x392FF2F0E4efEf1362e359C711f9d38A1a533B99
+### Sepolia-Agent-TokenURI: 0xA70dC0784048E3467603AeEb1bD86FC940b266eF
+### Sepolia-Deployer-TokenURI: 0x516A6f41080838416715813c5B1af0148D560000
