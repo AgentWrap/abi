@@ -119,7 +119,7 @@
     },
     {
         "type": "function",
-        "name": "deployWrapper",
+        "name": "deployERC7527",
         "inputs": [
             {
                 "name": "agencySettings",

@@ -19,17 +19,12 @@
                 "internalType": "address payable"
             },
             {
-                "name": "swapLPVault_",
+                "name": "wrapFoundationVault_",
                 "type": "address",
                 "internalType": "address payable"
             },
             {
                 "name": "swapLPRewardVault_",
-                "type": "address",
-                "internalType": "address"
-            },
-            {
-                "name": "lendingRewardVault_",
                 "type": "address",
                 "internalType": "address"
             },
@@ -42,9 +37,23 @@
                 "name": "erc6551AccountImp_",
                 "type": "address",
                 "internalType": "address"
+            },
+            {
+                "name": "uniswapV2Router_",
+                "type": "address",
+                "internalType": "contract IUniswapV2Router01"
+            },
+            {
+                "name": "wether_",
+                "type": "address",
+                "internalType": "address"
             }
         ],
-        "stateMutability": "nonpayable"
+        "stateMutability": "payable"
+    },
+    {
+        "type": "receive",
+        "stateMutability": "payable"
     },
     {
         "type": "function",
@@ -396,19 +405,6 @@
     },
     {
         "type": "function",
-        "name": "lendingRewardVault",
-        "inputs": [],
-        "outputs": [
-            {
-                "name": "",
-                "type": "address",
-                "internalType": "address"
-            }
-        ],
-        "stateMutability": "view"
-    },
-    {
-        "type": "function",
         "name": "mint",
         "inputs": [
             {
@@ -609,6 +605,35 @@
                 "name": "",
                 "type": "address",
                 "internalType": "address payable"
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "royaltyInfo",
+        "inputs": [
+            {
+                "name": "tokenId",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "salePrice",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "",
+                "type": "uint256",
+                "internalType": "uint256"
             }
         ],
         "stateMutability": "view"
@@ -830,19 +855,6 @@
     },
     {
         "type": "function",
-        "name": "swapLPVault",
-        "inputs": [],
-        "outputs": [
-            {
-                "name": "",
-                "type": "address",
-                "internalType": "address payable"
-            }
-        ],
-        "stateMutability": "view"
-    },
-    {
-        "type": "function",
         "name": "symbol",
         "inputs": [],
         "outputs": [
@@ -978,6 +990,32 @@
     },
     {
         "type": "function",
+        "name": "uniswapV2Router",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "address",
+                "internalType": "contract IUniswapV2Router01"
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "wether",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
         "name": "wrapCoin",
         "inputs": [],
         "outputs": [
@@ -1011,6 +1049,19 @@
                 "name": "hubGrowth",
                 "type": "uint256",
                 "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "wrapFoundationVault",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "address",
+                "internalType": "address payable"
             }
         ],
         "stateMutability": "view"
@@ -1324,6 +1375,70 @@
                 "name": "s",
                 "type": "bytes32",
                 "internalType": "bytes32"
+            }
+        ]
+    },
+    {
+        "type": "error",
+        "name": "ERC2981InvalidDefaultRoyalty",
+        "inputs": [
+            {
+                "name": "numerator",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "denominator",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ]
+    },
+    {
+        "type": "error",
+        "name": "ERC2981InvalidDefaultRoyaltyReceiver",
+        "inputs": [
+            {
+                "name": "receiver",
+                "type": "address",
+                "internalType": "address"
+            }
+        ]
+    },
+    {
+        "type": "error",
+        "name": "ERC2981InvalidTokenRoyalty",
+        "inputs": [
+            {
+                "name": "tokenId",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "numerator",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "denominator",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ]
+    },
+    {
+        "type": "error",
+        "name": "ERC2981InvalidTokenRoyaltyReceiver",
+        "inputs": [
+            {
+                "name": "tokenId",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "receiver",
+                "type": "address",
+                "internalType": "address"
             }
         ]
     },
